@@ -1,0 +1,106 @@
+.cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.cart-image {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0; /* Ensures the image doesn't shrink too much */
+}
+
+.cart-details {
+  flex: 1;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.cart-category,
+.cart-description,
+.cart-rating,
+.cart-price {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 8px;
+}
+
+.cart-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  align-self: flex-start; /* Keeps the button aligned to the left */
+}
+
+.cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns items to the start */
+  }
+
+  .cart-image {
+    margin-bottom: 16px; /* Adds spacing below the image */
+    max-width: 100px; /* Adjust image size for smaller screens */
+  }
+
+  .cart-details {
+    margin-left: 0; /* Removes left margin in vertical layout */
+  }
+
+  .cart-title {
+    font-size: 16px;
+  }
+
+  .cart-price {
+    font-size: 14px;
+  }
+
+  .cart-btn {
+    width: 100%; /* Makes the button full-width */
+    text-align: center; /* Centers button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-title,
+  .cart-category,
+  .cart-description,
+  .cart-rating,
+  .cart-price {
+    font-size: 12px;
+  }
+
+  .cart-btn {
+    font-size: 12px;
+  }
+}
